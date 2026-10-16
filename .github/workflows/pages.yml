@@ -22,7 +22,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site
-          cp -r public/* _site/
+          cp -r public/. _site/
           # SPA fallback for hash router previews + project-page base
           cp _site/index.html _site/404.html
           # courses.json next to the bundle so the Pages fallback can load it

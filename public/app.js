@@ -195,7 +195,7 @@ function vLogin(){
 
 async function vCheckout(slug){
   let c = COURSES.find(x=>x.slug===slug) || COURSES[0];
-  try{ const r=await fetch('/api/courses/'+slug); if(r.ok) c=await r.json(); }catch{}
+  try{ const r=await fetch('/api/courses/'+slug); if(r.ok){ const j=await r.json(); if(j && j.slug) c=j; } }catch{}
   if(!c) return '<h2>Pick a course</h2>';
   return '<div class="two"><form class="form" id="coForm" style="margin:0;max-width:none"><h2>'+ICONS.lock+' Secure checkout</h2><p style="color:var(--mut)">'+c.title+' — <b>'+money(c.price)+'</b></p><div id="coMsg"></div>'
   +'<label>Email for delivery</label><input id="coEmail" type="email" required value="'+(user?user.email:'')+'">'
@@ -282,7 +282,7 @@ function wireCheckout(slug){
     e.preventDefault();
     const btn=$('#stripePayBtn'); if(btn){ btn.disabled=true; btn.textContent='Redirecting to Stripe...'; }
     try{
-      const r=await fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({courseSlug:slug,email:$('#coEmail').value})});
+      let r; try{ r=await fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({courseSlug:slug,email:$('#coEmail').value})}); }catch(netErr){ $('#coMsg').innerHTML='<div class="alert err">Static demo (GitHub Pages): checkout needs the Node server. Run <code>npm start</code> locally or deploy with backend for Stripe.</div>'; if(btn){btn.disabled=false; btn.innerHTML='Try again';} return; }
       const j=await r.json();
       if(!r.ok){ $('#coMsg').innerHTML='<div class="alert err">'+(j.error||'Checkout failed')+'</div>'; if(btn){btn.disabled=false;} return; }
       if(j.url){ location.href=j.url; return; }
