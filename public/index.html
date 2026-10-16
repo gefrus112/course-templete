@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CoursePresstemplete</title>
+<meta name="description" content="CoursePress is a free GitHub template for selling courses. Storefront, Scratch Games course with slideshows, docs, signup & checkout." />
+<link rel="stylesheet" href="./styles.css" />
+  <style>html{background:#4a6388}body{background:#071427;color:#eaf6ff;margin:0;min-height:100vh}.announce{background:linear-gradient(90deg,#2563eb,#0ea5e9,#22c55e)}</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322c55e'/%3E%3Cstop offset='1' stop-color='%230ea5e9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M10 23V9l12 7-5 2-2 5z' fill='white'/%3E%3C/svg%3E" />
+<script>/* SVG icon sprite */</script>
+</head>
+<body>
+<div class="announce">Launch sale — <b>Scratch Games From Zero</b> $29 <s>$79</s> · <a href="#/course/scratch-games-from-zero">Get it now</a></div>
+<header class="nav">
+  <a class="brand" href="#/"><svg class="ic lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.9V15h2V9L12 3z"/><path d="M5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg> <span>CoursePress</span></a>
+  <nav class="links">
+    <a href="#/courses">Courses</a>
+    <a href="#/course/scratch-games-from-zero">Scratch Course</a>
+    <a href="#/docs">Docs</a>
+    <a href="#/pricing">Pricing</a>
+  </nav>
+  <div class="nav-cta">
+    <span id="userChip" class="chip hidden"></span>
+    <a href="#/login" id="loginLink" class="btn ghost sm">Log in</a>
+    <a href="#/signup" class="btn primary sm">Sign up free</a>
+    <button id="cartBtn" class="btn ghost sm"><svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="21" r="1.6"/><circle cx="19" cy="21" r="1.6"/><path d="M2 3h3l2.6 12.5a1 1 0 0 0 1 .5h8.9a1 1 0 0 0 1-.8L20.5 7H6"/></svg> <span id="cartCount">0</span></button>
+  </div>
+  <button class="hamburger" id="ham" aria-label="menu"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+</header>
+<div class="mobile-menu hidden" id="mobileMenu">
+  <a href="#/courses">Courses</a><a href="#/course/scratch-games-from-zero">Scratch Course</a>
+  <a href="#/docs">Docs</a><a href="#/pricing">Pricing</a><a href="#/signup">Sign up</a><a href="#/login">Log in</a>
+</div>
+
+<main id="app"></main>
+
+<footer class="footer">
+  <div class="foot-grid">
+    <div><h4><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.9V15h2V9L12 3z"/><path d="M5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg> CoursePress</h4><p>A free GitHub template to sell courses. Like freeCodeCamp, but yours — with money button.</p>
+    <form id="newsForm" class="news"><input id="newsEmail" type="email" placeholder="you@email.com" required /><button class="btn primary sm">Join</button></form>
+    <small id="newsMsg"></small></div>
+    <div><h5>Learn</h5><a href="#/courses">All courses</a><a href="#/course/scratch-games-from-zero">Scratch Games</a><a href="#/course/web-basics-html-css">HTML+CSS</a><a href="#/pricing">Pricing</a></div>
+    <div><h5>Docs</h5><a href="#/docs">Quickstart</a><a href="#/docs/sell">Sell your course</a><a href="#/docs/payments">Payments</a><a href="#/docs/deploy">Deploy</a></div>
+    <div><h5>Template</h5><a href="https://github.com" target="_blank" rel="noopener">Use this template ↗</a><a href="#/signup">Sign up</a><a href="#/login">Log in</a></div>
+  </div>
+  <p class="tiny">MIT licensed · Made for teachers & indie hackers · <span id="year"></span></p>
+</footer>
+
+<div id="cartDrawer" class="drawer hidden">
+  <h3>Your cart</h3><div id="cartItems"></div>
+  <div class="cart-foot"><div id="cartTotal"></div>
+  <button class="btn primary" id="checkoutBtn">Checkout →</button>
+  <button class="btn ghost" id="closeCart">Continue browsing</button></div>
+</div>
+<div id="toast" class="toast hidden"></div>
+<script src="./app.js"></script>
+</body>
+</html>

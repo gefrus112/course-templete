@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "scratch-games-from-zero",
+    "title": "Scratch Games From Zero",
+    "tagline": "Build 6 playable games in Scratch — no experience needed. Slides, projects & certificates included.",
+    "price": 29,
+    "compareAt": 79,
+    "level": "Beginner",
+    "category": "Game Dev",
+    "badge": "Bestseller",
+    "rating": 4.9,
+    "students": 12480,
+    "hours": 8,
+    "lessonsCount": 32,
+    "image": "gradient-1",
+    "features": ["6 complete games", "32 bite-size lessons", "Slide deck for every module", "Downloadable .sb3 projects", "Certificate of completion", "Lifetime updates"],
+    "curriculum": [
+      { "module": "Welcome + Setup", "lessons": ["How this course works", "Create your free Scratch account", "Tour of the editor"] },
+      { "module": "Module 1 — Chase Game", "lessons": ["Sprites, costumes & backdrops", "Move with arrow keys", "Keep score + timer", "Slideshow: game-loop basics"] },
+      { "module": "Module 2 — Maze Runner", "lessons": ["Draw your maze", "Wall collision with color sensing", "Win / lose screens", "Project: remix the maze"] },
+      { "module": "Module 3 — Flappy Clone", "lessons": ["Gravity in 3 blocks", "Pipes with clones", "High-score with variables", "Slideshow: variables & clones"] },
+      { "module": "Module 4 — Shooter", "lessons": ["Aim with mouse", "Bullets with clones", "Enemy waves + health", "Polish: sounds & particles"] },
+      { "module": "Module 5 — Platformer Finale", "lessons": ["Jump physics", "Scrolling levels", "Boss fight + ending", "Publish & share your game"] }
+    ],
+    "slides": [
+      { "title": "What is a game loop?", "bullets": ["Games redraw ~30x per second", "forever { move → check → score }", "You already use loops every day"], "code": "when green flag clicked\nforever\n  move (10) steps\n  if <touching [edge v]?> then\n    turn cw (15) degrees\n  end\nend" },
+      { "title": "Coordinates in Scratch", "bullets": ["Stage is 480 × 360", "Center is x:0 y:0", "go to x: y: teleports a sprite"], "code": "go to x: (0) y: (0)\nchange x by (10)\nset y to (100)" },
+      { "title": "Variables = score boxes", "bullets": ["Make a variable: Score", "change [Score v] by (1)", "Show / hide on stage"], "code": "when green flag clicked\nset [Score v] to (0)\nforever\n  if <touching [coin v]?> then\n    change [Score v] by (1)\n  end\nend" },
+      { "title": "Clones = copy-paste magic", "bullets": ["One sprite, 100 bullets", "when I start as a clone", "delete this clone to clean up"], "code": "when [space v] key pressed\ncreate clone of [bullet v]\n\nwhen I start as a clone\nrepeat (60)\n  change y by (10)\nend\ndelete this clone" }
+    ]
+  },
+  {
+    "slug": "web-basics-html-css",
+    "title": "Web Basics: HTML + CSS",
+    "tagline": "Clone freeCodeCamp-style pages and launch your first portfolio site in a weekend.",
+    "price": 19,
+    "compareAt": 49,
+    "level": "Beginner",
+    "category": "Web Dev",
+    "badge": "New",
+    "rating": 4.8,
+    "students": 8320,
+    "hours": 6,
+    "lessonsCount": 24,
+    "image": "gradient-2",
+    "features": ["24 lessons", "5 portfolio projects", "Slides for every concept", "Certificate"],
+    "curriculum": [
+      { "module": "HTML", "lessons": ["Tags & structure", "Links, images & lists", "Forms"] },
+      { "module": "CSS", "lessons": ["Selectors & colors", "Flexbox", "Grid + responsive"] }
+    ],
+    "slides": [
+      { "title": "HTML is the skeleton", "bullets": ["Tags wrap content", "<h1> to <p> to <a>", "Indent = readable"], "code": "<h1>My games</h1>\n<p>I built this!</p>\n<a href=\"#\">Play now</a>" }
+    ]
+  },
+  {
+    "slug": "javascript-games",
+    "title": "JavaScript Arcade Games",
+    "tagline": "From Scratch blocks to real code — build Snake, Breakout and a platformer in JS canvas.",
+    "price": 39,
+    "compareAt": 99,
+    "level": "Intermediate",
+    "category": "Game Dev",
+    "badge": "Popular",
+    "rating": 4.9,
+    "students": 6140,
+    "hours": 10,
+    "lessonsCount": 28,
+    "image": "gradient-3",
+    "features": ["3 arcade games", "Canvas + game loop", "Sound & particles", "Certificate"],
+    "curriculum": [
+      { "module": "JS Crash Course", "lessons": ["Variables & loops", "Functions & arrays"] },
+      { "module": "Arcade", "lessons": ["Snake", "Breakout", "Platformer"] }
+    ],
+    "slides": [
+      { "title": "requestAnimationFrame", "bullets": ["The JS game loop", "60 fps by default", "dt keeps speed fair"], "code": "function loop(t){\n  update(); draw();\n  requestAnimationFrame(loop);\n}\nrequestAnimationFrame(loop);" }
+    ]
+  },
+  {
+    "slug": "moneypress-starter",
+    "title": "MoneyPress Starter (Free)",
+    "tagline": "How to price, package and sell your own course — free mini-course on this very template.",
+    "price": 0,
+    "compareAt": 0,
+    "level": "All levels",
+    "category": "Business",
+    "badge": "Free",
+    "rating": 4.7,
+    "students": 20310,
+    "hours": 1.5,
+    "lessonsCount": 8,
+    "image": "gradient-4",
+    "features": ["Pricing worksheet", "Sales page checklist", "Launch email scripts"],
+    "curriculum": [{ "module": "Sell your course", "lessons": ["Pick a price", "Write your sales page", "Launch day checklist"] }],
+    "slides": [
+      { "title": "Price with confidence", "bullets": ["Free builds trust", "$19–$39 sweet spot", "Anchor with compare-at price"], "code": "value > price → buy\nfree course → email list\nemail list → launch sales" }
+    ]
+  }
+]

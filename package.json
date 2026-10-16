@@ -1,0 +1,26 @@
+{
+  "name": "coursepress-template",
+  "version": "1.0.0",
+  "description": "CoursePress — a freeCodeCamp-style GitHub template for selling courses. Includes storefront, Scratch Games course with slideshows, docs tabs, auth + checkout mock API.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "PORT=3000 node server.js",
+    "test": "node test/smoke.js"
+  },
+  "keywords": [
+    "courses",
+    "elearning",
+    "template",
+    "freecodecamp",
+    "scratch"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "stripe": "^14.25.0"
+  }
+}
+
